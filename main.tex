@@ -1,0 +1,165 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.4, 27 July 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options.
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=6.5cm,marginparwidth=5.5cm,marginparsep=0.5cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{008080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Vladimir Izmalkov}
+\tagline{Documentation Engineer, Ph.D.}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{2.5cm}{1}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{job@izmalk.uk}
+  \phone{+44 77 602 40 604}
+  \phone{+7 903 225 22 11}
+  \location{London , UK}
+  \homepage{http://izmalkov.net}
+%  \twitter{@yogspatil447}
+  \linkedin{www.linkedin.com/in/vaizmalkov/}
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+\cvevent{Senior Technical Writer}{Vaticle LTD}{Nov 2022 - Present}{London, UK}
+\begin{itemize}
+\item Developed product documentation for a family of products: open-source DBMS,
+Enterprise edition, and DBaaS cloud service. Including installation guides, quick start guides, developer guides, tutorials, and API reference.
+\item As the only technical writer in a small team of highly skilled software engineers actively participated in processes improvements and discussions: release policies, UX related breaking changes, style guide, and copy editing.
+\end{itemize}
+\cvevent{Lead Technical Writer}{VK Cloud Solutions (ex. Mail.Ru Cloud Solutions)}{Nov 2020 - Nov 2022}{Moscow, Russia}
+\begin{itemize}
+\item Developed product and project documentation for 3 enterprise products for B2B clients, including a Private cloud and Public cloud platforms (IaaS, PaaS, SaaS, DBaaS, etc.) with web GUI, API, and CLI. 
+\item Developed many different documents, including: documentation portal articles, Tender bids, Terms of references, Technical projects, Software descriptions, Functional specifications, Design notes, Manual testing programs, User guides, Admin guides, API references, tutorials, etc.
+\item Designed a full technological stack (Asciidoctor, Antora, Docker, Git) to develop and deliver docs faster with the Docs-as-code approach. This shortened TTM from 3-4 days to same-day delivery.
+\item Led 2 teams: recruiting, training, motivating, weekly sprints, retrospective meetings, style guide discussions, daily scrum, and periodic one-on-one feedback meetings. Built internal knowledge base.
+\item Managed security certification projects for two enterprise products.
+\end{itemize}
+\cvevent{Dean (part-time project)}{GeekBrains }{Jan 2021 - Jun 2021}{Moscow, Russia}
+\begin{itemize}
+\item Developed a full Technical writer training program, recruited trainers.
+\end{itemize}
+\cvevent{Senior Technical Writer}{Mail.Ru Group}{Jul 2019 -  Nov 2020 }{Moscow, Russia}
+\begin{itemize}
+\item Wrote open source documentation both in English and Russian for in-memory DBMS Tarantool
+with 7000+ public installations worldwide. Big enterprise and internal clients.
+\item Managed Security certification for the Tarantool Data Grid product: organized certification process, designed information security requirements, interviewed engineers to implement required security
+features, and wrote over 35 documents for certification.
+\item Eliminated more than 1 year of technical debt in the documentation for the Data Grid product.
+\item Developed project documentation and tender bids for 10+ projects.
+\end{itemize}
+\cvevent{Head of Research Department}{VNII GOChS, EMERCOM of Russia}{Apr 2016 - Jul 2019}{Moscow, Russia}
+\begin{itemize}
+\item Created System-112 and AIUS RSChS test labs to research and showcase emergency services communication procedures and technologies.
+\item Provided expertise and consultant services for System-112 integration for IT companies.
+\item Managed international projects and developed project documentation for World Bank Group and other international and domestic clients. Supervised implementation of emergency management automated systems in Russia and abroad.
+\item Led the IT support team of the Institute. 500 PCs, servers, CCTV, and other IT systems.
+\end{itemize}
+\divider
+\begin{fullwidth}
+Total work experience: since 2008. See more \linkedin{www.linkedin.com/in/vaizmalkov/}
+\end{fullwidth}
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+
+%\cvsection[page2sidebar]{Project Experience }
+%\cvachievement{\faMedkit}{Policy Insurance Portal Solution}{It's actually well known company insurance portal. All the policy holder buy or renew policy, as well we provide a claim facility too for instant resolution.}
+
+%\divider
+%\cvachievement{\faConnectdevelop}{Survey Tracking App.}{ Its US based client survey tracking app through which client make a survey for an individual vehicle as per requirement}
+%\divider
+%\cvachievement{\faNewspaperO}{ Insurance Policy Claim management App.}{Its related to customer claim management system, through which agent report a claim related to policy along with the insurance paradigms}
+
+%\divider
+%\cvachievement{\faOutdent}{Game Development}{ Individual game developer using hybrid and react native platforms. Currently total 3 mobile game deployed on play store.}
+
+%\cvsection{Hobbies}
+
+%\cvachievement{\faMedkit}{IT curiosity}{Read articles and explore new technologies}
+%\divider
+%\cvachievement{\faConnectdevelop}{Cyberpunk}{Reading books, watching movies, and playing games}
+%\divider
+%\cvachievement{\faNewspaperO}{Self-Development}{Neuropsychology, soft skills, time management, focus management, reading books and listening audio books on how to be my best}
+
+\clearpage
+
+
+\end{document}
